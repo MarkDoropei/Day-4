@@ -1,5 +1,6 @@
 const board = document.querySelector('#board')
 const squares_number = 480
+const text = document.querySelector('h1')
 
 const colors = [
     "#000000", "#001900", "#003300", "#004c00", "#006600", 
@@ -22,7 +23,17 @@ const colors = [
     '#FFC0CB', '#FF69B4', '#DB7093', '#C71585', '#800040',
     '#FFA07A', '#FA8072', '#E9967A', '#F08080', '#CD5C5C',
     '#FFD700', '#FFC107', '#FFA500', '#FF8C00', '#FF7F50',
-    '#DC143C', '#B22222', '#8B0000'
+    '#DC143C', '#B22222', '#8B0000',
+
+    "#99CCFF", "#F5FF33", "#F366FF", "#F333FF", "#FF3380", "#FF66A8", "#FFA033", "#FFA833",
+    "#33FF57", "#33FFA8", "#33FFF5", "#66ff33", "#66fff5", "#80FF33", "#83FF33", "#86FF66",
+    "#FFC0CB", "#FF69B4", "#DB7093", "#C71585",
+    "#3399ff", "#66ccff", "#99ccff", "#cceeff",
+    "#FFC107", "#FFA500", "#FF8C00",
+    "#FF5733", 
+    "#F333FF", 
+    "#33FFF5", 
+    "#F5FF33"
   ];
 
 for(let i = 0; i < squares_number; i++){
@@ -40,8 +51,10 @@ for(let i = 0; i < squares_number; i++){
 
 function setColor (element){
    const color = getRandomColor();
+   text.style.color = color;
    element.style.backgroundColor = color;
    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
+
 }
 
 function removeColor (element){

@@ -15,7 +15,7 @@ body {
 .container{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   max-width:400px;
   flex-wrap: wrap;
 }
@@ -26,9 +26,16 @@ body {
   margin: 2px;
   box-sizing: 0 0 2px black;
   background:#1d1d1d;
-  transition: 1.8s ease;
+  transition: 2.5s ease-out;
 }
 
 .square:hover{
   transition-duration: 00s;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
